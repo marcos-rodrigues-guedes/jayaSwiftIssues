@@ -17,7 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-Ye-7bY">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-fC-yL6">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-Ye-7bY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -79,6 +83,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="H5j-Ye-7bY" firstAttribute="top" secondItem="hi4-9Z-pHI" secondAttribute="top" id="7rR-Vf-r5k"/>
+                            <constraint firstItem="ebJ-fC-yL6" firstAttribute="centerX" secondItem="59F-6s-cdf" secondAttribute="centerX" id="9MM-Rp-PgT"/>
+                            <constraint firstItem="ebJ-fC-yL6" firstAttribute="centerY" secondItem="59F-6s-cdf" secondAttribute="centerY" id="MmD-Ae-B8z"/>
                             <constraint firstItem="H5j-Ye-7bY" firstAttribute="leading" secondItem="hi4-9Z-pHI" secondAttribute="leading" id="NUU-gg-Oia"/>
                             <constraint firstItem="hi4-9Z-pHI" firstAttribute="trailing" secondItem="H5j-Ye-7bY" secondAttribute="trailing" id="Nw7-Jo-Ain"/>
                             <constraint firstItem="hi4-9Z-pHI" firstAttribute="bottom" secondItem="H5j-Ye-7bY" secondAttribute="bottom" id="nCA-Hd-SPw"/>

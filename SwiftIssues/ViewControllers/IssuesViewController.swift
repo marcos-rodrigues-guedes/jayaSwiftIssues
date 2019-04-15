@@ -79,5 +79,7 @@ extension IssuesViewController: UITableViewDataSource {
 extension IssuesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: SeguesConstant.issueDetailsSegue, sender: nil)
+        issuesTableView.deselectRow(at: indexPath, animated: true)
+        
     }
 }
