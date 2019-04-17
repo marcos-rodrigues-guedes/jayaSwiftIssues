@@ -23,8 +23,9 @@ class IssuesTableViewCell: UITableViewCell {
 }
 
 extension IssuesTableViewCell {
-    func prepareViewCell(issue: Issue) {
-        self.issuesTitleLabel.text? = issue.title
-        self.issuesStatusLabel.text? = issue.state.rawValue
+    func configure(with title: String, and state: String) {
+        issuesTitleLabel.text? = title
+        issuesStatusLabel.text? = state
+        
     }
 }

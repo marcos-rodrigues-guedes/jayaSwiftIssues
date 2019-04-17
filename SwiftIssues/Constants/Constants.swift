@@ -8,17 +8,21 @@
 
 import Foundation
 
-struct APIConstant {
+struct API {
     static let baseURL = "https://api.github.com"
     static let path = "/repos/apple/swift/issues"
 }
 
-struct TableCellConstant {
+struct TableViewCell {
     static let issuesCell = "IssuesCell"
 }
 
-struct SeguesConstant {
-    static let issueDetailsSegue = "issuesDetailsSegue"
+
+struct ViewIdentifier {
+    static var issueDetailsViewController: String { return "IssueDetailsView" }
 }
 
+struct Storyboard {
+    static var issues: String { return "Issues" }
+}
 

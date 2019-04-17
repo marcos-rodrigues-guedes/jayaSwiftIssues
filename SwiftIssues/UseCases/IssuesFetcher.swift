@@ -13,11 +13,8 @@ protocol IssuesFetcher {
 }
 
 struct IssuesSwiftFetcher: IssuesFetcher  {
-    let issuesService: IssuesService
     
-    init(issuesService: IssuesService) {
-        self.issuesService = issuesService
-    }
+    var issuesService: IssuesService!
     
     func fetch(completion: @escaping (Issues?) -> Void) {
         issuesService.getIssues(completion:  { issuesData, error in

@@ -20,29 +20,28 @@ class IssueDetailsViewController: UIViewController {
     @IBOutlet weak var issueDescriptionTextView: UITextView!
     @IBOutlet weak var userAvarImageView: UIImageView!
     
-    var issue: Issue!
+    var issuesDetailsPresenter: IssueDetailsPresenter!
+
     
-    var issuesDetailsPresenter: IssuesDetailsPresenter?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         prepareView()
-
         
     }
+    
     @IBAction func openIssuePressed(_ sender: Any) {
-         issuesDetailsPresenter?.openURL(url: issue.url)
+         issuesDetailsPresenter?.openURL(url: issuesDetailsPresenter.getIssue().url)
     }
 }
 
 extension IssueDetailsViewController: IssueDetailsView {
     
     func prepareView() {
+        let issue = issuesDetailsPresenter.getIssue()
         issueTitleLabel.text? = issue.title
         issueDateLabel.text? = issue.createdAt.dateToString()
         issueDescriptionTextView.text? = issue.body
-        guard let issuesDetailsPresenter = issuesDetailsPresenter else { fatalError("Missing dependencies") }
-        issuesDetailsPresenter.attachView(view: self)
+        userAvarImageView.image = nil
         issuesDetailsPresenter.getUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
     }
 

@@ -23,12 +23,12 @@ extension IssuesAPIService: TargetType {
     }
     
     var baseURL: URL {
-        return URL(string: APIConstant.baseURL)!
+        return URL(string: API.baseURL)!
     }
     
     var path: String {
         switch self {
-        case .getSwiftIssues: return APIConstant.path
+        case .getSwiftIssues: return API.path
         }
     }
     

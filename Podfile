@@ -10,7 +10,6 @@ target 'SwiftIssues' do
 
   # Swinject
   pod 'Swinject'
-  pod 'SwinjectAutoregistration'
   pod 'SwinjectStoryboard'
  
   # rx
@@ -22,11 +21,8 @@ target 'SwiftIssues' do
   target 'SwiftIssuesTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
-
-  target 'SwiftIssuesUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  
 end

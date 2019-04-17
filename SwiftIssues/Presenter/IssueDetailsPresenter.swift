@@ -9,27 +9,27 @@
 import Foundation
 import PINRemoteImage
 
-protocol IssuesDetailsPresenter {
-    func attachView(view: IssueDetailsView)
-    func detachView()
+protocol IssueDetailsPresenter {
     func getUserAvatar(userAvarImageView: UIImageView, url: String)
     func openURL(url: String)
+    func setupIssueInfo(issue: Issue)
+    func getIssue() -> Issue
 }
 
-class IssuesViewDetailsPresenter: IssuesDetailsPresenter {
+class IssueViewDetailsPresenter: IssueDetailsPresenter {
     
-    weak private var issueDetailsView: IssueDetailsView?
-    
-    func attachView(view: IssueDetailsView) {
-        self.issueDetailsView = view
-    }
-    
-    func detachView() {
-        self.issueDetailsView = nil
-    }
+    private var selectedIssue: Issue!
     
     func getUserAvatar(userAvarImageView: UIImageView, url: String) {
         userAvarImageView.pin_setImage(from: URL(string: url)!)
+    }
+    
+    func setupIssueInfo(issue: Issue) {
+        selectedIssue = issue
+    }
+    
+    func getIssue() -> Issue {
+        return selectedIssue
     }
     
     func openURL(url: String) {
