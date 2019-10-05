@@ -29,8 +29,8 @@ class IssueTableViewCell: UITableViewCell {
 
 extension IssueTableViewCell {
     func configure(with title: String, and state: String) {
-        issuesTitleLabel.text? = title
-        issuesStatusLabel.text? = state
+        issueTitleLabel.text? = title
+        issueStatusLabel.text? = state
         
     }
 }
