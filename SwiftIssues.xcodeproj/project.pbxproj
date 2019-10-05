@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6805364B2348E68300AA4225 /* DetailIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6805364A2348E68300AA4225 /* DetailIssue.storyboard */; };
 		680F4EE1234694ED009E9A29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */; };
+		68AF6FD82349089600EDC417 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF6FD72349089600EDC417 /* IssuesViewController.swift */; };
+		68E6FACF2349015600CDE0DE /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6FACD2349015600CDE0DE /* IssueTableViewCell.swift */; };
+		68E6FAD02349015600CDE0DE /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E6FACE2349015600CDE0DE /* IssueTableViewCell.xib */; };
 		A940944D261A2EA6D3941F0D /* Pods_SwiftIssues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE867793FEB24FFD4FA5818 /* Pods_SwiftIssues.framework */; };
 		BC0979F0226636FA008EB0DA /* IssuesListItemCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0979EF226636FA008EB0DA /* IssuesListItemCellPresenter.swift */; };
 		BC0979F422663AAE008EB0DA /* ViewControllerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0979F322663AAE008EB0DA /* ViewControllerInjector.swift */; };
@@ -49,7 +53,11 @@
 		20DC3A60E3B6A687377A48E5 /* Pods_SwiftIssuesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIssuesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F21FBEEA8463EB9BD396DB2 /* Pods_SwiftIssuesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIssuesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE26692D7E937C14974AF89 /* Pods-SwiftIssues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIssues.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues.release.xcconfig"; sourceTree = "<group>"; };
+		6805364A2348E68300AA4225 /* DetailIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailIssue.storyboard; sourceTree = "<group>"; };
 		680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		68AF6FD72349089600EDC417 /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
+		68E6FACD2349015600CDE0DE /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		68E6FACE2349015600CDE0DE /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
 		814F948C5A0A73750520FE2C /* Pods-SwiftIssues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIssues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0979EF226636FA008EB0DA /* IssuesListItemCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListItemCellPresenter.swift; sourceTree = "<group>"; };
 		BC0979F322663AAE008EB0DA /* ViewControllerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInjector.swift; sourceTree = "<group>"; };
@@ -100,11 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68E6FAD12349017100CDE0DE /* IssueCell */ = {
+			isa = PBXGroup;
+			children = (
+				68E6FACD2349015600CDE0DE /* IssueTableViewCell.swift */,
+				68E6FACE2349015600CDE0DE /* IssueTableViewCell.xib */,
+			);
+			path = IssueCell;
+			sourceTree = "<group>";
+		};
 		BC0979E922663170008EB0DA /* List */ = {
 			isa = PBXGroup;
 			children = (
+				68E6FAD12349017100CDE0DE /* IssueCell */,
 				BC1A1590226018220022680A /* IssuesListItemCell.swift */,
 				BC0979F622663DB6008EB0DA /* IssuesListViewController.swift */,
+				68AF6FD72349089600EDC417 /* IssuesViewController.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -221,6 +240,7 @@
 			children = (
 				BC0FBEEC225E4BEC00CD90D0 /* LaunchScreen.storyboard */,
 				BC1A1594226018D10022680A /* Issues.storyboard */,
+				6805364A2348E68300AA4225 /* DetailIssue.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -379,6 +399,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6805364B2348E68300AA4225 /* DetailIssue.storyboard in Resources */,
+				68E6FAD02349015600CDE0DE /* IssueTableViewCell.xib in Resources */,
 				BC1A1595226018D10022680A /* Issues.storyboard in Resources */,
 				680F4EE1234694ED009E9A29 /* GoogleService-Info.plist in Resources */,
 				BC0FBEEE225E4BEC00CD90D0 /* LaunchScreen.storyboard in Resources */,
@@ -515,7 +537,9 @@
 				BC0979F722663DB6008EB0DA /* IssuesListViewController.swift in Sources */,
 				BCFAFE00226433E900647A80 /* Dependency+Extension.swift in Sources */,
 				BC1A1591226018220022680A /* IssuesListItemCell.swift in Sources */,
+				68AF6FD82349089600EDC417 /* IssuesViewController.swift in Sources */,
 				BCFAFE0222644DFE00647A80 /* String+Extension.swift in Sources */,
+				68E6FACF2349015600CDE0DE /* IssueTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
