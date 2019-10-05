@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680F4EE1234694ED009E9A29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */; };
 		A940944D261A2EA6D3941F0D /* Pods_SwiftIssues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE867793FEB24FFD4FA5818 /* Pods_SwiftIssues.framework */; };
 		BC0979F0226636FA008EB0DA /* IssuesListItemCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0979EF226636FA008EB0DA /* IssuesListItemCellPresenter.swift */; };
 		BC0979F422663AAE008EB0DA /* ViewControllerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0979F322663AAE008EB0DA /* ViewControllerInjector.swift */; };
@@ -48,6 +49,7 @@
 		20DC3A60E3B6A687377A48E5 /* Pods_SwiftIssuesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIssuesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F21FBEEA8463EB9BD396DB2 /* Pods_SwiftIssuesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIssuesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE26692D7E937C14974AF89 /* Pods-SwiftIssues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIssues.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues.release.xcconfig"; sourceTree = "<group>"; };
+		680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		814F948C5A0A73750520FE2C /* Pods-SwiftIssues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIssues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0979EF226636FA008EB0DA /* IssuesListItemCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListItemCellPresenter.swift; sourceTree = "<group>"; };
 		BC0979F322663AAE008EB0DA /* ViewControllerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInjector.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		BC0FBEE2225E4BE900CD90D0 /* SwiftIssues */ = {
 			isa = PBXGroup;
 			children = (
+				680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */,
 				BC0FBEEF225E4BEC00CD90D0 /* Info.plist */,
 				BC0979F22266378D008EB0DA /* Resources */,
 				BCFAFDFE226433BE00647A80 /* Extensions */,
@@ -301,6 +304,7 @@
 				BC0FBEDD225E4BE900CD90D0 /* Frameworks */,
 				BC0FBEDE225E4BE900CD90D0 /* Resources */,
 				7AD3ECF2EAFDE4E6E0F21B81 /* [CP] Embed Pods Frameworks */,
+				680F4EE223469AEC009E9A29 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -376,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1A1595226018D10022680A /* Issues.storyboard in Resources */,
+				680F4EE1234694ED009E9A29 /* GoogleService-Info.plist in Resources */,
 				BC0FBEEE225E4BEC00CD90D0 /* LaunchScreen.storyboard in Resources */,
 				BC0FBEEB225E4BEC00CD90D0 /* Assets.xcassets in Resources */,
 			);
@@ -421,22 +426,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIssuesTests/Pods-SwiftIssuesTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftIssuesTests/Pods-SwiftIssuesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftIssuesTests/Pods-SwiftIssuesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIssuesTests/Pods-SwiftIssuesTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftIssuesTests/Pods-SwiftIssuesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BEA38A4FCC6FEC41F38E2CF /* [CP] Check Pods Manifest.lock */ = {
@@ -461,7 +459,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7AD3ECF2EAFDE4E6E0F21B81 /* [CP] Embed Pods Frameworks */ = {
+		680F4EE223469AEC009E9A29 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,36 +467,31 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
-				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
-				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
-			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues-frameworks.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		7AD3ECF2EAFDE4E6E0F21B81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftIssues/Pods-SwiftIssues-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -684,7 +677,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaya.SwiftIssues;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaya.swiftIssues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -703,7 +696,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaya.SwiftIssues;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaya.swiftIssues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

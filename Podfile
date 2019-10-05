@@ -15,9 +15,14 @@ target 'SwiftIssues' do
   # rx
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Fabric'
-  pod 'Crashlytics'
-
+  
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  
+  # Pods for PodTest
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.13.4'
+  
   target 'SwiftIssuesTests' do
     inherit! :search_paths
     # Pods for testing
