@@ -19,10 +19,14 @@ struct TableViewCell {
 
 
 struct ViewIdentifier {
-    static var issueDetailsViewController: String { return "IssueDetailsView" }
+    static var issueDetailsViewController: String {
+         return "IssueDetailsView"
+    }
 }
 
 struct Storyboard {
-    static var issues: String { return "Issues" }
+    static var issues: String {
+         return "Issues"
+    }
 }
 

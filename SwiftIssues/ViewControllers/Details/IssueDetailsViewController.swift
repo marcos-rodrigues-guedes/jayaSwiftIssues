@@ -20,7 +20,7 @@ class IssueDetailsViewController: UIViewController {
     @IBOutlet weak var issueDescriptionTextView: UITextView!
     @IBOutlet weak var userAvarImageView: UIImageView!
     
-    var issuesDetailsPresenter: IssueDetailsPresenter!
+    var presente: IssueDetailsPresenter!
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,14 +30,14 @@ class IssueDetailsViewController: UIViewController {
     }
     
     @IBAction func openIssuePressed(_ sender: Any) {
-         issuesDetailsPresenter?.openURL(url: issuesDetailsPresenter.getIssue().url)
+         presente?.openURL(url: presente.getIssue().url)
     }
 }
 
 extension IssueDetailsViewController: IssueDetailsView {
     
     func prepareView() {
-        let issue = issuesDetailsPresenter.getIssue()
+        let issue = presente.getIssue()
         issueTitleLabel.text? = issue.title
         issueDateLabel.text? = issue.createdAt.dateToString()
         issueDescriptionTextView.text? = issue.body
