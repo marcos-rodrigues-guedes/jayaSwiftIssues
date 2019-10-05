@@ -54,6 +54,8 @@ class IssuesListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellView = issuesListPresenter.getCellPresenter(for: indexPath.row)
+
+        
         return populateUsersListItemCell(with: cellView, at: indexPath) ?? UITableViewCell()
     }
     

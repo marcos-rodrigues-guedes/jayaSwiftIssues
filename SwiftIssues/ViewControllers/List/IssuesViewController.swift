@@ -11,26 +11,45 @@ import UIKit
 class IssuesViewController: UIViewController {
     
     var presenter: IssuesViewPresenter!
+
+    lazy var issueDetailsViewController: IssueDetailsViewController = {
+        let viewController = viewControllerInjector.inject(viewController: 
+        ViewIdentifier.issueDetailsViewController, in: Storyboard.issues) 
+        as? IssueDetailsViewController ?? IssueDetailsViewController()
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
-extension IssuesViewController'lffe`1~1357.,./
+// MARK: - Table view data source
+extension IssuesViewController: UITableViewDataSource {
+
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfRows
+   }
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let issuesItem = presenter.getCellPresenter(for: indexPath.row)
+         if let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.issuesCell, for: indexPath) as? IssuesTableViewCell {
+            cell.configure(with: issuesItem.title, and: issuesItem.state)
+            return cell
+        }
+        
+        return nil
+   
+}
+
+extension IssuesViewController: UITableViewDelegate {
+
+}
+
+
+
+
 
 
