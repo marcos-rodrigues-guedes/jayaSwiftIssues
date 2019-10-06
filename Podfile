@@ -6,8 +6,9 @@ target 'SwiftIssues' do
   
   # Pods for API service using Moya
   pod 'Moya/RxSwift'
-  pod 'PINRemoteImage', '~> 3.0.0-beta'
-
+  
+  pod 'SDWebImage', '~> 5.0'
+  
   # Swinject
   pod 'Swinject'
   pod 'SwinjectStoryboard'

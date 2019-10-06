@@ -2,9 +2,10 @@
 //  ViewControllerInjector.swift
 //  SwiftIssues
 //
-//  Created by virtus on 16/04/19.
+//  Created by marcos.guedes on 10/5/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
+
 
 import SwinjectStoryboard
 
@@ -23,4 +24,3 @@ struct ViewControllerInjector: ViewControllerInjecting {
         return viewController
     }
 }
-

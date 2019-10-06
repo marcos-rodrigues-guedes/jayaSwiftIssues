@@ -16,20 +16,20 @@ extension SwinjectStoryboard {
        
         Container.loggingFunction = nil
     
-        defaultContainer.storyboardInitCompleted(IssuesListViewController.self) { resolver, controller in
-            controller.issuesListPresenter = resolver.resolve(IssuesViewPresenter.self)
+        defaultContainer.storyboardInitCompleted(IssuesViewController.self) { resolver, controller in
+            controller.presenter = resolver.resolve(IssuesViewPresenter.self)
             controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
         }
         
         defaultContainer.storyboardInitCompleted(IssueDetailsViewController.self) { resolver, controller in
-            controller.issuesDetailsPresenter = resolver.resolve(IssueDetailsPresenter.self)
+           controller.presente = resolver.resolve(IssueDetailsPresenter.self)
         }
     }
     
     class func registerPresenters() {
         defaultContainer.register(IssuesViewPresenter.self) { resolver in
             let presenter = IssuesViewPresenter()
-            presenter.issuesFetcher = resolver.resolve(IssuesFetcher.self)
+            presenter.service = resolver.resolve(IssuesFetcher.self)
             return presenter
         }
         
@@ -44,9 +44,9 @@ extension SwinjectStoryboard {
             return ViewControllerInjector()
         }
         defaultContainer.register(IssuesFetcher.self) {  resolver in
-            var service = IssuesSwiftFetcher()
-            service.issuesService = resolver.resolve(IssuesService.self)
-            return service
+            var issueService = IssuesSwiftFetcher()
+            issueService.service = resolver.resolve(IssuesService.self)
+            return issueService
         }
         defaultContainer.register(IssuesService.self) { _ in
             return IssuesSwiftService()

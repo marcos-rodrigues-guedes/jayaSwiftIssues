@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import PINRemoteImage
+
 
 protocol IssueDetailsPresenter {
-    func getUserAvatar(userAvarImageView: UIImageView, url: String)
     func openURL(url: String)
     func setupIssueInfo(issue: Issue)
     func getIssue() -> Issue
@@ -18,10 +17,12 @@ protocol IssueDetailsPresenter {
 
 class IssueViewDetailsPresenter: IssueDetailsPresenter {
     
+    // MARK: - Private variables
     private var selectedIssue: Issue!
-    
-    func getUserAvatar(userAvarImageView: UIImageView, url: String) {
-        userAvarImageView.pin_setImage(from: URL(string: url)!)
+
+    // MARK: - functions
+    func openURL(url: String) {
+        Helper.openURL(url: url)
     }
     
     func setupIssueInfo(issue: Issue) {
@@ -32,13 +33,4 @@ class IssueViewDetailsPresenter: IssueDetailsPresenter {
         return selectedIssue
     }
     
-    func openURL(url: String) {
-        if let url = URL(string: url) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
-    }
 }

@@ -40,6 +40,10 @@
                         <viewLayoutGuide key="safeArea" id="AMQ-tc-8cK"/>
                     </view>
                     <navigationItem key="navigationItem" id="d2e-LI-1Ce"/>
+                    <connections>
+                        <outlet property="issuesActivityIndicatorView" destination="SHs-aT-eFI" id="J8l-ln-dAc"/>
+                        <outlet property="issuesTableView" destination="VFU-Z5-Bck" id="sPe-f1-EP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0x-dv-WD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,6 +57,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dBa-ig-ktr">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

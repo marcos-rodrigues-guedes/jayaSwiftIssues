@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="286-uM-NH6">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--Issue Details View Controller-->
         <scene sceneID="6xY-Iu-PFu">
             <objects>
-                <viewController storyboardIdentifier="IssueDetailsView" id="286-uM-NH6" customClass="IssueDetailsViewController" customModule="SwiftIssues" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IssueDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="286-uM-NH6" customClass="IssueDetailsViewController" customModule="SwiftIssues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wwH-SS-fjn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

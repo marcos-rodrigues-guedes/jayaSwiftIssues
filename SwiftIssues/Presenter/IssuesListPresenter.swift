@@ -14,16 +14,19 @@ protocol IssuesListViewPresenter {
 
 class IssuesViewPresenter : IssuesListViewPresenter {
     
-    var issuesFetcher: IssuesFetcher!
+    var service: IssuesFetcher!
     
-    var numberOfRows: Int { return issues.count }
+    var numberOfRows: Int {
+        return issues.count
+        
+    }
     
     private var issues = [Issue]()
     
     private var cellViews = [IssueListItemCellPresenter]()
     
     func getIssues(completion: @escaping (Issues?) -> Void) {
-        issuesFetcher.fetch(completion: { issues in
+        service.fetch(completion: { issues in
             self.cellViews.removeAll()
             
             self.issues = issues ?? [Issue]()
@@ -35,7 +38,13 @@ class IssuesViewPresenter : IssuesListViewPresenter {
         })
     }
     
-    func getIssues(for row: Int) -> Issue { return issues[row] }
-    func getCellPresenter(for row: Int) -> IssuesListItem { return cellViews[row] }
+    func getIssues(for row: Int) -> Issue {
+        return issues[row]
+        
+    }
+    func getCellPresenter(for row: Int) -> IssuesListItem {
+        return cellViews[row]
+        
+    }
 }
 

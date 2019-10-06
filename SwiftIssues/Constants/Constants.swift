@@ -14,19 +14,13 @@ struct API {
 }
 
 struct TableViewCell {
-    static let issuesCell = "IssuesCell"
+    static let issuesCell = "IssueTableViewCell"
 }
 
 
-struct ViewIdentifier {
-    static var issueDetailsViewController: String {
-         return "IssueDetailsView"
-    }
-}
-
-struct Storyboard {
-    static var issues: String {
-         return "Issues"
+struct Storyboards {
+    static var DetailIssues: String {
+         return "IssueDetails"
     }
 }
 

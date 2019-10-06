@@ -41,8 +41,7 @@ extension IssueDetailsViewController: IssueDetailsView {
         issueTitleLabel.text? = issue.title
         issueDateLabel.text? = issue.createdAt.dateToString()
         issueDescriptionTextView.text? = issue.body
-        userAvarImageView.image = nil
-        issuesDetailsPresenter.getUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
+        Helper.getUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
     }
 
 }

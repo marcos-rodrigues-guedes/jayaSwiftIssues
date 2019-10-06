@@ -14,10 +14,10 @@ protocol IssuesFetcher {
 
 struct IssuesSwiftFetcher: IssuesFetcher  {
     
-    var issuesService: IssuesService!
+    var service: IssuesService!
     
     func fetch(completion: @escaping (Issues?) -> Void) {
-        issuesService.getIssues(completion:  { issuesData, error in
+         service.getIssues(completion:  { issuesData, error in
             if let error = error {
                 print("Error received requesting Swift Issues: \(error.localizedDescription)")
                 completion(nil)
