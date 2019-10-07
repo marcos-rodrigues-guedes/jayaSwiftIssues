@@ -67,7 +67,7 @@ extension IssuesViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Register and config cell
 extension IssuesViewController {
     func registerCell()  {
-        issuesTableView.rowHeight = 100
+        issuesTableView.rowHeight = 150
         issuesTableView.register(UINib.init(nibName: TableViewCell.issuesCell, bundle: nil), forCellReuseIdentifier: TableViewCell.issuesCell)
     }
 }
