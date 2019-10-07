@@ -41,7 +41,13 @@ extension IssueDetailsViewController: IssueDetailsView {
         issueTitleLabel.text? = issue.title
         issueDateLabel.text? = issue.createdAt.dateToString()
         issueDescriptionTextView.text? = issue.body
+        userAvarImageView.layer.borderWidth = 1
+        userAvarImageView.layer.masksToBounds = false
+        userAvarImageView.layer.borderColor = UIColor.black.cgColor
+        userAvarImageView.layer.cornerRadius = userAvarImageView.frame.height/2
+        userAvarImageView.clipsToBounds = true
         Helper.getUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
+        
     }
 
 }

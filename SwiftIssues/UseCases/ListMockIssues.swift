@@ -1,24 +1,20 @@
 //
-//  FetchSwiftIssues.swift
+//  ListMockIssues.swift
 //  SwiftIssues
 //
-//  Created by virtus on 12/04/19.
+//  Created by marcos.guedes on 10/7/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 
 import Foundation
 
 
-protocol ListIssuesUseCase {
-    func fetch(completion: @escaping (Issues?) -> Void)
-}
-
-struct ListIssues: ListIssuesUseCase  {
+struct ListMockIssuesFetch: ListIssuesUseCase  {
     
     var service: IssuesService!
     
     func fetch(completion: @escaping (Issues?) -> Void) {
-        service.getIssues(completion:  { issuesData, error in
+        service.getLocalIssues(completion:  { issuesData, error in
             if let error = error {
                 print("Error received requesting Swift Issues: \(error.localizedDescription)")
                 completion(nil)

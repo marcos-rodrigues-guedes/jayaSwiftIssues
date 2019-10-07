@@ -8,18 +8,16 @@
 import Foundation
 import Nimble
 import Quick
-import Swinject
+
 
 @testable import SwiftIssues
 
 class IssuesListPresenterSpec: QuickSpec {
     
-    private let container = Container()
-    
     override func spec() {
          
         let presenter = IssuesViewPresenter()
-        var useCaseService = IssuesSwiftFetcher()
+        var useCaseService = ListIssues()
         let issueService = IssuesSwiftService()
        
         useCaseService.service = issueService
@@ -52,4 +50,9 @@ class IssuesListPresenterSpec: QuickSpec {
         }
         
     }
+}
+
+class MockListIssuesUseCase: IssuesListViewPresenter {
+    
+    
 }

@@ -11,7 +11,6 @@ import RxSwift
 
 protocol IssuesService {
     func getIssues(completion: @escaping (Data?, Error?) -> Void)
-    func getLocalIssues(completion: @escaping (Data?, Error?) -> Void)
     
 }
 
@@ -35,10 +34,6 @@ struct IssuesSwiftService: IssuesService {
                 }
             }
             .disposed(by: bag)
-    }
-    
-    func getLocalIssues(completion: @escaping (Data?, Error?) -> Void) {
-        
     }
     
 }

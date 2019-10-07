@@ -14,7 +14,7 @@ protocol IssuesListViewPresenter {
 
 class IssuesViewPresenter : IssuesListViewPresenter {
     
-    var service: IssuesFetcher!
+    var listIssuesUseCase: ListIssuesUseCase!
     
     var numberOfRows: Int {
         return issues.count
@@ -26,7 +26,7 @@ class IssuesViewPresenter : IssuesListViewPresenter {
     private var cellViews = [IssueListItemCellPresenter]()
     
     func getIssues(completion: @escaping (Issues?) -> Void) {
-        service.fetch(completion: { issues in
+        listIssuesUseCase.fetch(completion: { issues in
             self.cellViews.removeAll()
             
             self.issues = issues ?? [Issue]()
