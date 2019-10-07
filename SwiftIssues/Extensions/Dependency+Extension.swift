@@ -33,7 +33,7 @@ extension SwinjectStoryboard {
     class func registerPresenters() {
         defaultContainer.register(IssuesViewPresenter.self) { resolver in
             let presenter = IssuesViewPresenter()
-            presenter.service = resolver.resolve(ListIssuesUseCase.self)
+            presenter.listIssuesUseCase = resolver.resolve(ListIssuesUseCase.self)
             return presenter
         }
         

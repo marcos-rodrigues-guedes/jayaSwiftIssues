@@ -9,13 +9,19 @@
 import Foundation
 
 protocol IssuesListViewPresenter {
-    func getIssues(completion: @escaping (Issues?) -> Void)
+    var view: ListView? { get set }
+    func getIssues()
+}
+
+protocol ListView {
+  func onSuccess()
 }
 
 class IssuesViewPresenter : IssuesListViewPresenter {
     
+    var view: ListView?
     var listIssuesUseCase: ListIssuesUseCase!
-    
+
     var numberOfRows: Int {
         return issues.count
         
@@ -25,7 +31,7 @@ class IssuesViewPresenter : IssuesListViewPresenter {
     
     private var cellViews = [IssueListItemCellPresenter]()
     
-    func getIssues(completion: @escaping (Issues?) -> Void) {
+    func getIssues() {
         listIssuesUseCase.fetch(completion: { issues in
             self.cellViews.removeAll()
             
@@ -34,7 +40,7 @@ class IssuesViewPresenter : IssuesListViewPresenter {
             for issue in self.issues {
                 self.cellViews.append(IssueListItemCellPresenter(issue: issue))
             }
-            completion(issues)
+            self.view?.onSuccess()
         })
     }
     

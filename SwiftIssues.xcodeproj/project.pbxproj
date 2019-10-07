@@ -10,11 +10,6 @@
 		680F4EE1234694ED009E9A29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */; };
 		685CA6B223496F1000361CDB /* IssueDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685CA6B123496F1000361CDB /* IssueDetails.storyboard */; };
 		685CA6B4234973B400361CDB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CA6B3234973B400361CDB /* Helper.swift */; };
-		68A88437234BB45B00B30F53 /* ListMockIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A88436234BB45B00B30F53 /* ListMockIssues.swift */; };
-		68A8843F234BC47F00B30F53 /* ListMockIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8843E234BC47F00B30F53 /* ListMockIssues.swift */; };
-		68A88440234BC47F00B30F53 /* ListMockIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8843E234BC47F00B30F53 /* ListMockIssues.swift */; };
-		68A88442234BC90300B30F53 /* MockIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A88441234BC90300B30F53 /* MockIssues.swift */; };
-		68A88443234BC90300B30F53 /* MockIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A88441234BC90300B30F53 /* MockIssues.swift */; };
 		68AF6FD82349089600EDC417 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF6FD72349089600EDC417 /* IssuesViewController.swift */; };
 		68BD744B23493DBD00423C1A /* ViewControllerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD744A23493DBD00423C1A /* ViewControllerInjector.swift */; };
 		68E6FACF2349015600CDE0DE /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6FACD2349015600CDE0DE /* IssueTableViewCell.swift */; };
@@ -26,7 +21,6 @@
 		BC0FBEEE225E4BEC00CD90D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0FBEEC225E4BEC00CD90D0 /* LaunchScreen.storyboard */; };
 		BC1A1595226018D10022680A /* Issues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1594226018D10022680A /* Issues.storyboard */; };
 		BC1A1596226018D10022680A /* Issues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1594226018D10022680A /* Issues.storyboard */; };
-		BC26F4292267792100AE7621 /* dataset-issues.json in Resources */ = {isa = PBXBuildFile; fileRef = BC26F4282267792100AE7621 /* dataset-issues.json */; };
 		BC5A01BF2261718D00FA9466 /* IssuesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A01BE2261718D00FA9466 /* IssuesAPIService.swift */; };
 		BC5A01C32261735400FA9466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A01C22261735400FA9466 /* Constants.swift */; };
 		BC5A01C822617BBB00FA9466 /* ListIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A01C722617BBB00FA9466 /* ListIssues.swift */; };
@@ -60,9 +54,6 @@
 		680F4EE0234694ED009E9A29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		685CA6B123496F1000361CDB /* IssueDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IssueDetails.storyboard; sourceTree = "<group>"; };
 		685CA6B3234973B400361CDB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		68A88436234BB45B00B30F53 /* ListMockIssues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMockIssues.swift; sourceTree = "<group>"; };
-		68A8843E234BC47F00B30F53 /* ListMockIssues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMockIssues.swift; sourceTree = "<group>"; };
-		68A88441234BC90300B30F53 /* MockIssues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIssues.swift; sourceTree = "<group>"; };
 		68AF6FD72349089600EDC417 /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		68BD744A23493DBD00423C1A /* ViewControllerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInjector.swift; sourceTree = "<group>"; };
 		68E6FACD2349015600CDE0DE /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,7 +68,6 @@
 		BC0FBEF4225E4BEC00CD90D0 /* SwiftIssuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIssuesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0FBEFA225E4BEC00CD90D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC1A1594226018D10022680A /* Issues.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Issues.storyboard; sourceTree = "<group>"; };
-		BC26F4282267792100AE7621 /* dataset-issues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dataset-issues.json"; sourceTree = "<group>"; };
 		BC5A01BE2261718D00FA9466 /* IssuesAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesAPIService.swift; sourceTree = "<group>"; };
 		BC5A01C22261735400FA9466 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC5A01C722617BBB00FA9466 /* ListIssues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIssues.swift; sourceTree = "<group>"; };
@@ -236,8 +226,6 @@
 		BC26F427226778EF00AE7621 /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC26F4282267792100AE7621 /* dataset-issues.json */,
-				68A88441234BC90300B30F53 /* MockIssues.swift */,
 			);
 			path = "Test Data";
 			sourceTree = "<group>";
@@ -262,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				BC5A01C722617BBB00FA9466 /* ListIssues.swift */,
-				68A88436234BB45B00B30F53 /* ListMockIssues.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -316,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				BCFAFE16226574F700647A80 /* IssuesListPresenterSpec.swift */,
-				68A8843E234BC47F00B30F53 /* ListMockIssues.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -445,7 +431,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1A1596226018D10022680A /* Issues.storyboard in Resources */,
-				BC26F4292267792100AE7621 /* dataset-issues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,13 +549,10 @@
 				BC0979F0226636FA008EB0DA /* IssuesListItemCellPresenter.swift in Sources */,
 				685CA6B4234973B400361CDB /* Helper.swift in Sources */,
 				BCFAFE072264C8B700647A80 /* IssueDetailsPresenter.swift in Sources */,
-				68A88442234BC90300B30F53 /* MockIssues.swift in Sources */,
-				68A8843F234BC47F00B30F53 /* ListMockIssues.swift in Sources */,
 				BC8B3FC4225EDAB000795485 /* Issues.swift in Sources */,
 				BC5A01E32263A26D00FA9466 /* issuesService.swift in Sources */,
 				BCFAFE00226433E900647A80 /* Dependency+Extension.swift in Sources */,
 				68AF6FD82349089600EDC417 /* IssuesViewController.swift in Sources */,
-				68A88437234BB45B00B30F53 /* ListMockIssues.swift in Sources */,
 				BCFAFE0222644DFE00647A80 /* String+Extension.swift in Sources */,
 				68E6FACF2349015600CDE0DE /* IssueTableViewCell.swift in Sources */,
 				68BD744B23493DBD00423C1A /* ViewControllerInjector.swift in Sources */,
@@ -581,8 +563,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A88440234BC47F00B30F53 /* ListMockIssues.swift in Sources */,
-				68A88443234BC90300B30F53 /* MockIssues.swift in Sources */,
 				BCFAFE17226574F700647A80 /* IssuesListPresenterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

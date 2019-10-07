@@ -27,20 +27,20 @@ class IssuesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Swift Isssues"
+        self.presenter?.view = self
         registerCell()
         getIssues()
 
    }
     // MARK: - Private functions
     private func getIssues() {
-        presenter.getIssues(completion: { [weak self] _ in
-            self?.issuesTableView.reloadData()
-            self?.issuesActivityIndicatorView.stopAnimating()
-            
-        })
+        presenter.getIssues()
     }
     
-}
+    private func registerCell()  {
+        issuesTableView.rowHeight = 150
+        issuesTableView.register(UINib.init(nibName: TableViewCell.issuesCell, bundle: nil), forCellReuseIdentifier: TableViewCell.issuesCell)
+    }}
 
 // MARK: - Table view data source/delegate
 extension IssuesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -64,10 +64,10 @@ extension IssuesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// MARK: - Register and config cell
-extension IssuesViewController {
-    func registerCell()  {
-        issuesTableView.rowHeight = 150
-        issuesTableView.register(UINib.init(nibName: TableViewCell.issuesCell, bundle: nil), forCellReuseIdentifier: TableViewCell.issuesCell)
+// MARK: - Issues callback
+extension IssuesViewController: ListView {
+    func onSuccess() {
+        self.issuesTableView.reloadData()
+        self.issuesActivityIndicatorView.stopAnimating()
     }
 }

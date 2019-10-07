@@ -2,13 +2,12 @@
 //  ViewControllerInjectorSpec.swift
 //  SwiftIssuesTests
 //
-//  Created by virtus on 15/04/19.
+//  Created by marcos.guedes on 10/07/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 import Foundation
 import Nimble
 import Quick
-
 
 @testable import SwiftIssues
 
@@ -17,42 +16,27 @@ class IssuesListPresenterSpec: QuickSpec {
     override func spec() {
          
         let presenter = IssuesViewPresenter()
-        var useCaseService = ListIssues()
-        let issueService = IssuesSwiftService()
-       
-        useCaseService.service = issueService
-        presenter.service = useCaseService
+        presenter.service = MockListIssues()
         
-        describe("Test empty issues list") {
-            it("Test not issues in list") {
-                 expect(presenter.numberOfRows).to(equal(0))
+        describe("Given Issues results") {
+            
+            beforeEach {
+                presenter.getIssues()
                 
             }
-        }
-        
-        describe("Callback testing") {
-            it("can test callbacks using waitUntil") {
-                waitUntil(timeout: 2) { done in
-                    presenter.getIssues(completion: {_ in
-                        
-                            expect(presenter.numberOfRows).notTo(equal(0))
-                            expect(presenter.numberOfRows) > 1
-                            expect(presenter.getIssues(for: 0).title).toNot(beNil())
-                            expect(presenter.getIssues(for: 0).state.rawValue).toNot(beNil())
-                            expect(presenter.getIssues(for: 0).title).to(beAnInstanceOf(String.self))
-                            expect(presenter.getIssues(for: 0).state.rawValue).toNot(beNil())
-                        
-                        done()
-                    })
-
-                }
+            it("should show the correct number of selected people in the list") {
+                expect(presenter.numberOfRows).to(equal(3))
             }
+            
+            it("should show the correct person in each row") {
+                
+            }
+            
         }
         
     }
 }
 
-class MockListIssuesUseCase: IssuesListViewPresenter {
-    
+class MockListIssues: ListIssuesUseCase {
     
 }
