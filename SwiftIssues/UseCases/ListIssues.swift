@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol IssuesFetcher {
+protocol ListIssues {
     func fetch(completion: @escaping (Issues?) -> Void)
 }
 
-struct IssuesSwiftFetcher: IssuesFetcher  {
+struct IssuesSwiftFetcher: ListIssues  {
     
     var service: IssuesService!
     
@@ -23,19 +23,12 @@ struct IssuesSwiftFetcher: IssuesFetcher  {
                 completion(nil)
             }
             // Parse data into a model object.
-            let issuesDecoded = self.decodeJSON(type: Issues.self, from: issuesData)
+            let issuesDecoded = Helper.decodeJSON(type: Issues.self, from: issuesData)
             completion(issuesDecoded)
         })
     }
     
-    private func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        guard let data = from,
-            let response = try? decoder.decode(type.self, from: data) else { return nil }
-        
-        return response
-    }
+    
 }
 
 

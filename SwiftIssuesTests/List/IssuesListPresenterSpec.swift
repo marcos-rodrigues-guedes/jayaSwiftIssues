@@ -8,18 +8,22 @@
 import Foundation
 import Nimble
 import Quick
+import Swinject
 
 @testable import SwiftIssues
 
 class IssuesListPresenterSpec: QuickSpec {
     
+    private let container = Container()
+    
     override func spec() {
+         
         let presenter = IssuesViewPresenter()
         var useCaseService = IssuesSwiftFetcher()
         let issueService = IssuesSwiftService()
        
-        useCaseService.issuesService = issueService
-        presenter.issuesFetcher = useCaseService
+        useCaseService.service = issueService
+        presenter.service = useCaseService
         
         describe("Test empty issues list") {
             it("Test not issues in list") {
