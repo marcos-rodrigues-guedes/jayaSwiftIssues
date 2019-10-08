@@ -24,11 +24,11 @@ class IssueViewDetailsPresenter: IssueDetailsPresenter {
     func openURL(url: String) {
         Helper.openURL(url: url)
     }
-    
+    // set selected issue
     func setupIssueInfo(issue: Issue) {
         selectedIssue = issue
     }
-    
+    // return selected issue
     func getIssue() -> Issue {
         return selectedIssue
     }

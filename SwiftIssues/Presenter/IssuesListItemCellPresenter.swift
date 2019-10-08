@@ -23,7 +23,7 @@ class IssueListItemCellPresenter: IssuesListItem {
         title = issue.title
         state = issue.state
     }
-    
+    // parser and return status of issue
     func getStatus() -> String {
         return state == State.stateClose ? IssueStatus.FECHADO.IssueStatus(): IssueStatus.ABERTO.IssueStatus()
     }
