@@ -18,7 +18,7 @@ class IssuesListItemCellPresenterSpec: QuickSpec {
           
           describe("Given a issue list item") {
             it("should display issue's title") {
-                expect(cellPresenter.title).to(equal("User 1"))
+                expect(cellPresenter.title).to(equal("Sema: Improve redeclaration error for synthesized inits"))
             }
             
             it("should display issue's status") {
