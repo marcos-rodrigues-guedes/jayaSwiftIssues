@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// ListIssuesUseCase Protocol
 protocol ListIssuesUseCase {
     func fetch(completion: @escaping (Issues?, Error?) -> Void)
 }
@@ -16,7 +16,7 @@ protocol ListIssuesUseCase {
 struct ListIssues: ListIssuesUseCase  {
 
     var service: IssuesService!
-    
+    // fetch all swift issues
     func fetch(completion: @escaping (Issues?, Error?) -> Void) {
         service.getIssues(completion:  { issuesData, error in
             if let error = error {

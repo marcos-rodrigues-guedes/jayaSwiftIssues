@@ -6,13 +6,13 @@
 //  Copyright © 2019 jaya. All rights reserved.
 //
 
-
 import SwinjectStoryboard
 
+// ViewControllerInjecting Protocol
 protocol ViewControllerInjecting {
     func inject(viewController identifier: String, in storyboard: String) -> UIViewController
 }
-
+// Implement ViewControllerInjecting
 struct ViewControllerInjector: ViewControllerInjecting {
     func inject(viewController identifier: String, in storyboard: String) -> UIViewController {
         let viewController = SwinjectStoryboard.create(

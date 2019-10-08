@@ -12,11 +12,12 @@ import SDWebImage
 class Helper {
     
     // MARK: - Helper functions
-    static func getUserAvatar(userAvarImageView: UIImageView, url: String) {
+    // set user issue image in Image View
+    static func setUserAvatar(userAvarImageView: UIImageView, url: String) {
          userAvarImageView.sd_setImage(with: URL(string: url),
                                              placeholderImage: UIImage(named: "image.png"))
     }
-    
+    // open issue in browser
     static func openURL(url: String) {
         if let url = URL(string: url) {
             if #available(iOS 10.0, *) {
@@ -26,6 +27,7 @@ class Helper {
             }
         }
     }
+    // decode data object with snakeCase strategy
     static func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase

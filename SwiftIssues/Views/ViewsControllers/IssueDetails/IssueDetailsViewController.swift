@@ -22,38 +22,37 @@ class IssueDetailsViewController: UIViewController {
     
     var presente: IssueDetailsPresenter!
 
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareView()
         
     }
-    
+    // open all issue datails in browser
     @IBAction func openIssuePressed(_ sender: Any) {
          presente?.openURL(url: presente.getIssue().url)
     }
 }
 
 extension IssueDetailsViewController: IssueDetailsView {
-    
+    // set labels and image of issue details
     func prepareView() {
         let issue = presente.getIssue()
         issueTitleLabel.text? = issue.title
         issueDateLabel.text? = issue.createdAt.dateToString()
         issueDescriptionTextView.text? = issue.body
         userAvarImageView.setRounded()
-        Helper.getUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
+        Helper.setUserAvatar(userAvarImageView: userAvarImageView, url: issue.user.avatarUrl)
         
     }
 
 }
 
-
+// change UimageView to circle image
 extension UIImageView {
 
    func setRounded() {
     let radius = self.frame.width / 2
-      self.layer.cornerRadius = radius
-      self.layer.masksToBounds = true
+    self.layer.cornerRadius = radius
+    self.layer.masksToBounds = true
    }
 }

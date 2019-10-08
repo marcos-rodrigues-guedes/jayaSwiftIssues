@@ -37,7 +37,7 @@ class IssuesViewController: UIViewController {
     private func getIssues() {
         presenter.getIssues()
     }
-    
+    // register issue cell in tableview and define rowHeight
     private func registerCell()  {
         issuesTableView.rowHeight = 150
         issuesTableView.register(UINib.init(nibName: TableViewCell.issuesCell, bundle: nil), forCellReuseIdentifier: TableViewCell.issuesCell)
@@ -67,11 +67,12 @@ extension IssuesViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Issues callback
 extension IssuesViewController: ListView {
+    // run if error
     func onError(_ error: Error) {
         print("Error received requesting Swift Issues: \(error.localizedDescription)")
         
     }
-    
+    // run if success in get issues
     func onSuccess() {
         self.issuesTableView.reloadData()
         self.issuesActivityIndicatorView.stopAnimating()

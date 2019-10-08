@@ -11,11 +11,11 @@ import Swinject
 import SwinjectStoryboard
 
 extension SwinjectStoryboard {
-
+    // register all storyboards in container
     class func registerStoryboards() {
        
         Container.loggingFunction = nil
-    
+        
         defaultContainer.storyboardInitCompleted(IssuesViewController.self) { resolver, controller in
             controller.presenter = resolver.resolve(IssuesViewPresenter.self)
             controller.viewControllerInjector = resolver.resolve(ViewControllerInjecting.self)
@@ -29,7 +29,7 @@ extension SwinjectStoryboard {
             return ViewControllerInjector()
         }
     }
-    
+    // register all presenters in container
     class func registerPresenters() {
         defaultContainer.register(IssuesViewPresenter.self) { resolver in
             let presenter = IssuesViewPresenter()
@@ -42,7 +42,7 @@ extension SwinjectStoryboard {
             return presenter
         }
     }
-    
+    // register all services in container
     class func registerServices() {
         
         defaultContainer.register(ListIssuesUseCase.self) {  resolver in

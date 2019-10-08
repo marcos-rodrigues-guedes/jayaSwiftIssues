@@ -6,7 +6,7 @@
 //  Copyright © 2019 jaya. All rights reserved.
 //
 
-
+// User Model
 struct User: Codable {
     let login: String
     let id: Int

@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 
+// IssuesService Protocol
 protocol IssuesService {
     func getIssues(completion: @escaping (Data?, Error?) -> Void)
     
@@ -17,7 +18,7 @@ protocol IssuesService {
 struct IssuesSwiftService: IssuesService {
 
     let bag = DisposeBag()
-    
+    // return all swift issues in repository
     func getIssues(completion: @escaping (Data?, Error?) -> Void) {
         moyaProvider.rx
             .request(IssuesAPIService.getSwiftIssues)

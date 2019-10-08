@@ -29,13 +29,13 @@ class IssueTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        // space of cells
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     }
     
 }
 
-
+// configure cell labels and prepare shadow, corner radius in cell.
 extension IssueTableViewCell {
     func configure(with title: String, and state: String) {
         issueTitleLabel.text? = title

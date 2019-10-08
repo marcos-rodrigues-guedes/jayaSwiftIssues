@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SwiftIssues
 //
-//  Created by virtus on 10/04/19.
+//  Created by marcos.guedes on 10/5/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 
@@ -19,13 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         super.init()
-        
+        // perform DI
         SwinjectStoryboard.initialize()
         
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // start firebase services
         FirebaseApp.configure()
         return true
     }
