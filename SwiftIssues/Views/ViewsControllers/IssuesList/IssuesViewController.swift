@@ -27,6 +27,7 @@ class IssuesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Swift Isssues"
+        issuesTableView.accessibilityIdentifier = "issuesTableView"
         self.presenter?.view = self
         registerCell()
         getIssues()
