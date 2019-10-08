@@ -1,8 +1,8 @@
 //
-//  FetchSwiftIssues.swift
+//  ListIssues.swift
 //  SwiftIssues
 //
-//  Created by virtus on 12/04/19.
+//  Created by marcos.guedes on 10/07/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 

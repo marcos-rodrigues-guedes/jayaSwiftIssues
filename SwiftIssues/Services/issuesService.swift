@@ -1,8 +1,8 @@
 //
-//  GetIssuesService.swift
+//  IssuesSwiftService.swift
 //  SwiftIssues
 //
-//  Created by virtus on 14/04/19.
+//  Created by virtus on 10/05/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 

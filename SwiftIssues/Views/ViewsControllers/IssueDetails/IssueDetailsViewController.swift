@@ -2,7 +2,7 @@
 //  IssueDetailsViewController.swift
 //  SwiftIssues
 //
-//  Created by virtus on 15/04/19.
+//  Created by marcos.guedes on 10/5/19.
 //  Copyright © 2019 jaya. All rights reserved.
 //
 
