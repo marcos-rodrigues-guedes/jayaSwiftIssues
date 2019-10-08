@@ -33,8 +33,8 @@ class IssuesListPresenterSpec: QuickSpec {
                 expect(presenter.getIssues(for: 0).id).to(equal(434330824))
                 expect(presenter.getIssues(for: 0).title).to(equal("Sema: Improve redeclaration error for synthesized inits"))
                 expect(presenter.getIssues(for: 0).createdAt).to(equal("2019-04-17T14:58:08Z"))
-                expect(presenter.getIssues(for: 0).state).to(equal("close"))
-                expect(presenter.getIssues(for: 1).state).to(equal("open"))
+                expect(presenter.getIssues(for: 0).state.rawValue).to(equal("close"))
+                expect(presenter.getIssues(for: 1).state.rawValue).to(equal("open"))
             }
             
         }

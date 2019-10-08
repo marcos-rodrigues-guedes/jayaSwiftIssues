@@ -18,11 +18,11 @@ class IssuesDetailsPresenterSpec: QuickSpec {
         
         describe("Given issue details") {
             beforeEach {
-                presenter.setupIssueInfo(MockUsers.data.first!)
+                presenter.setupIssueInfo(issue: MockHelper.getMockIssues().first!)
             }
             
             it("should display issue info") {
-                expect(presenter.getIssue().title).to(equal("User 1\nUsername 1\nEmail 1"))
+                expect(presenter.getIssue().title).to(equal("Sema: Improve redeclaration error for synthesized inits"))
             }
         }
     }

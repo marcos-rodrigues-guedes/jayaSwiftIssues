@@ -1,8 +1,12 @@
+
+import Foundation
+@testable import SwiftIssues
+
 struct MockHelper {
 
-    static func getMockIssues() -> [Issues] {
+    static func getMockIssues() -> Issues {
         let data = readJSON(name: "dataset-issues")
-         return Helper.decodeJSON(type: Issues.self, from: data)
+        return Helper.decodeJSON(type: Issues.self, from: data)!
     }
 
 
