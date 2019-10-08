@@ -66,6 +66,11 @@ extension IssuesViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Issues callback
 extension IssuesViewController: ListView {
+    func onError(_ error: Error) {
+        print("Error received requesting Swift Issues: \(error.localizedDescription)")
+        
+    }
+    
     func onSuccess() {
         self.issuesTableView.reloadData()
         self.issuesActivityIndicatorView.stopAnimating()

@@ -15,6 +15,7 @@ protocol IssuesListViewPresenter {
 
 protocol ListView {
   func onSuccess()
+  func onError(_ error: Swift.Error)
 }
 
 class IssuesViewPresenter : IssuesListViewPresenter {
@@ -32,7 +33,12 @@ class IssuesViewPresenter : IssuesListViewPresenter {
     private var cellViews = [IssueListItemCellPresenter]()
     
     func getIssues() {
-        listIssuesUseCase.fetch(completion: { issues in
+        listIssuesUseCase.fetch(completion: { issues, error in
+            
+            if let error = error {
+                self.view?.onError(error)
+                
+            }
             self.cellViews.removeAll()
             
             self.issues = issues ?? [Issue]()

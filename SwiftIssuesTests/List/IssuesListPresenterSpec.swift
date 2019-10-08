@@ -16,7 +16,7 @@ class IssuesListPresenterSpec: QuickSpec {
     override func spec() {
          
         let presenter = IssuesViewPresenter()
-        presenter.service = MockListIssues()
+        presenter.listIssuesUseCase = MockListIssues()
         
         describe("Given Issues results") {
             
@@ -24,12 +24,14 @@ class IssuesListPresenterSpec: QuickSpec {
                 presenter.getIssues()
                 
             }
-            it("should show the correct number of selected people in the list") {
-                expect(presenter.numberOfRows).to(equal(3))
+            it("should show the correct number of issues in the list") {
+                expect(presenter.numberOfRows).to(equal(30))
             }
             
             it("should show the correct person in each row") {
                 
+                expect(presenter.getIssues(for: 0).id).to(equal(434330824))
+                expect(presenter.getIssues(for: 0).createdAt).to(equal("2019-04-17T14:58:08Z"))
             }
             
         }
@@ -38,5 +40,25 @@ class IssuesListPresenterSpec: QuickSpec {
 }
 
 class MockListIssues: ListIssuesUseCase {
+    
+    func fetch(completion: @escaping (Issues?, Error?) -> Void) {
+        let data = readJSON(name: "dataset-issues")
+        let issuesDecoded = Helper.decodeJSON(type: Issues.self, from: data)
+        completion(issuesDecoded, nil)
+    }
+
+  
+  private func readJSON(name: String) -> Data? {
+    let bundle = Bundle(for: IssuesListPresenterSpec.self)
+    guard let url = bundle.url(forResource: name, withExtension: "json") else { return nil }
+    
+    do {
+      return try Data(contentsOf: url, options: .mappedIfSafe)
+    }
+    catch {
+
+      return nil
+    }
+  }
     
 }
