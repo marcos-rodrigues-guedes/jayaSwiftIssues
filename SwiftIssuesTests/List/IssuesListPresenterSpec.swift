@@ -21,7 +21,7 @@ class IssuesListPresenterSpec: QuickSpec {
         useCaseService.issuesService = issueService
         presenter.issuesFetcher = useCaseService
         
-        describe("Test empty issues list") {
+        describe("Test empty issues list u") {
             it("Test not issues in list") {
                  expect(presenter.numberOfRows).to(equal(0))
                 
