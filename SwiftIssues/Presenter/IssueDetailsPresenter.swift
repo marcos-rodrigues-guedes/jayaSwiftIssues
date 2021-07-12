@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import PINRemoteImage
+import UIKit
+import SDWebImage
 
 protocol IssueDetailsPresenter {
     func getUserAvatar(userAvarImageView: UIImageView, url: String)
@@ -21,7 +22,8 @@ class IssueViewDetailsPresenter: IssueDetailsPresenter {
     private var selectedIssue: Issue!
     
     func getUserAvatar(userAvarImageView: UIImageView, url: String) {
-        userAvarImageView.pin_setImage(from: URL(string: url)!)
+        userAvarImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
+
     }
     
     func setupIssueInfo(issue: Issue) {

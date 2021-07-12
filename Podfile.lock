@@ -10,26 +10,14 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - Nimble (8.0.1)
-  - PINCache (3.0.1-beta.7):
-    - PINCache/Arc-exception-safe (= 3.0.1-beta.7)
-    - PINCache/Core (= 3.0.1-beta.7)
-  - PINCache/Arc-exception-safe (3.0.1-beta.7):
-    - PINCache/Core
-  - PINCache/Core (3.0.1-beta.7):
-    - PINOperation (~> 1.1.1)
-  - PINOperation (1.1.1)
-  - PINRemoteImage (3.0.0-beta.14):
-    - PINRemoteImage/PINCache (= 3.0.0-beta.14)
-  - PINRemoteImage/Core (3.0.0-beta.14):
-    - PINOperation
-  - PINRemoteImage/PINCache (3.0.0-beta.14):
-    - PINCache (= 3.0.1-beta.7)
-    - PINRemoteImage/Core
   - Quick (2.0.0)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
   - Swinject (2.6.0)
   - SwinjectStoryboard (2.2.0):
     - Swinject (~> 2.6)
@@ -39,46 +27,42 @@ DEPENDENCIES:
   - Fabric
   - Moya/RxSwift
   - Nimble
-  - PINRemoteImage (~> 3.0.0-beta)
   - Quick
   - RxCocoa
   - RxSwift
+  - SDWebImage (~> 5.0)
   - Swinject
   - SwinjectStoryboard
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Crashlytics
     - Fabric
     - Moya
     - Nimble
-    - PINCache
-    - PINOperation
-    - PINRemoteImage
     - Quick
     - Result
     - RxCocoa
     - RxSwift
+    - SDWebImage
     - Swinject
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  Crashlytics: a33af323773f73904037dc2e684cd2f0d29f4fe2
+  Fabric: 09ef2d9b99b104702bede1acaf469fb8f20a9146
   Moya: 161263550064ff8a4948e8ff63137fd72a876292
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
-  PINCache: 7cb9ae068c8f655717f7c644ef1dff9fd573e979
-  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
-  PINRemoteImage: 81bbff853acc71c6de9e106e9e489a791b8bbb08
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: b306def4cff0fd70cfe9dc8596984aa2930fc1d1
+PODFILE CHECKSUM: b7c28d2c35c72b40f67067dd29f2b1804a94d191
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1
