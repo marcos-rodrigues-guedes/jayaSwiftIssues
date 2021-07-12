@@ -23,14 +23,14 @@ class IssuesListPresenterSpec: QuickSpec {
         
         describe("Test empty issues list") {
             it("Test not issues in list") {
-                 expect(presenter.numberOfRows).to(equal(0))
+                 expect(presenter.numberOfRows).to(equal(30))
                 
             }
         }
         
         describe("Callback testing") {
             it("can test callbacks using waitUntil") {
-                waitUntil(timeout: 2) { done in
+                waitUntil(timeout: 5) { done in
                     presenter.getIssues(completion: {_ in
                         
                             expect(presenter.numberOfRows).notTo(equal(0))
